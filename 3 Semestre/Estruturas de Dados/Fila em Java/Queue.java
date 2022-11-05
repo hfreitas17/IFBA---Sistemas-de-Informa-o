@@ -11,19 +11,52 @@ Alunos:
 - Hamilton
 */
 
+import java.util.LinkedList;
 import java.util.Queue;
 
-public class principal {
+public class principalQueue {
 
+    
     public static void main(String[] args) {
 
-        Queue<> filaDePessoas = Queue();
+        Queue<Object> filaDePessoas = new LinkedList<>();
 
+        //---- Metodo ADD() usado para adicionar elementos na Fila ----
+        filaDePessoas.add("Gabriela");
+        filaDePessoas.add("Gustavo");
+        filaDePessoas.add("Ariane") ;
+        filaDePessoas.add("Mariana");
+        filaDePessoas.add("Brendo");
+        filaDePessoas.add("Hamilton");
+
+        //Imprimir a Fila Atual
+        System.out.println("\n\nFila Atual: INICIO <- " + filaDePessoas + " <- FIM" + "\n");
+
+        //---- Metodo SIZE() usado para retornar o tamanho (Quantidade de elementos) da Fila ----
+        System.out.println("Tamanho da Fila Atual: " + filaDePessoas.size() + "\n");
+
+        //---- Metodo PEEK() usado para consulta o elemento que esta no Inicio da Fila sem remover ----
+        System.out.println("Quem esta no Inicio da Fila Atual: " + filaDePessoas.peek() + "\n");
+
+        //---- Metodo POLL() usado para remover o elemento que esta no Inicio da Fila ----
+        System.out.println("Remover quem esta no Inicio da Fila: " + filaDePessoas.poll() + "\n");
+
+        //----Imprimir a Fila e o Tamanho----
+        System.out.println("Fila Após remover o primeiro elemento: " + filaDePessoas + " Tamanho: " + filaDePessoas.size() + "\n");
+
+        //---- Metodo Buscar um Elemento na Fila ----
+        System.out.println("Hamilton esta na Fila? " + filaDePessoas + " Tamanho: " + filaDePessoas.size() + "\n");
+
+        //---- Pecorrer toda a Fila listando os elementos sem Remover ----
+        for( Object nome: filaDePessoas){
+            System.out.println(nome);
+        }   
         
+        System.out.println("Remove " + filaDePessoas.remove());
+        System.out.println("\n\nFila Atual: INICIO <- " + filaDePessoas + " <- FIM" + "\n");
 
+        System.out.println("\n\n");        
 
     }
-
-
 
 }
