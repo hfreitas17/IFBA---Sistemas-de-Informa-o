@@ -54,6 +54,9 @@ public class principalQueue {
         
         System.out.println("Remove " + filaDePessoas.remove());
         System.out.println("\n\nFila Atual: INICIO <- " + filaDePessoas + " <- FIM" + "\n");
+        
+        //---- Pesquisa Elemento na Fila
+        System.out.println("\n\nEsta na fila? " + filaDePessoas.contains("Jose") + "\n");
 
         System.out.println("\n\n");        
 
